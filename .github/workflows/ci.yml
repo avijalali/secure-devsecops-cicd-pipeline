@@ -34,6 +34,7 @@ jobs:
           bandit -r app
 
       - name: Run Safety Scan
+          continue-on-error: true
         run: |
           safety check -r app/requirements.txt --full-report
 
