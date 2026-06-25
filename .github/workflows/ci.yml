@@ -35,7 +35,7 @@ jobs:
 
       - name: Run Safety Scan
         run: |
-          safety scan
+          safety check -r app/requirements.txt --full-report
 
       - name: Build Docker Image
         run: |
